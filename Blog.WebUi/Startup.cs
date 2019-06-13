@@ -26,7 +26,16 @@ namespace Blog.WebUi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Blog API", Version = "v1" });
+                c.SwaggerDoc("v1", 
+                new Info { 
+                    Title = "Blog API",
+                     Version = "v1",
+                     Contact = new Contact{
+                         Name = "Girish Godage",
+                         Url = "https://github.com/girishgodage/blog",
+                         Email="girishgodage@gmail.com"                        
+                     }
+                });
             });
     
             // In production, the Angular files will be served from this directory
